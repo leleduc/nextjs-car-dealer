@@ -1,43 +1,19 @@
-"use client";
-import React, { useState } from "react";
-import Select from "react-select";
-
-const LanguageDropdown = ({
-  selectedLanguage,
-  handleLanguageChange,
-  languageOptions,
-}) => {
-  return (
-    <Select
-      value={selectedLanguage}
-      onChange={handleLanguageChange}
-      options={languageOptions}
-      isSearchable={false}
-    />
-  );
-};
+'use client';
+import React, { useState } from 'react';
 
 const TopBar = () => {
   const [selectedLanguage, setSelectedLanguage] = useState(null);
 
-  const handleLanguageChange = (selectedOption) => {
-    setSelectedLanguage(selectedOption);
-  };
-
-  const languageOptions = [
-    { value: "en", label: "English" },
-    { value: "es", label: "Spanish" },
-    { value: "fr", label: "French" },
-  ];
   return (
-    <div className="container">
-      <div className="clearfix top-bar-wrapper">
+    <div className="w-full bg-green-200 ">
+      <div className="bg-green-400 w-[80%] py-3 m-auto">
         {/* LANGS */}
-        <LanguageDropdown
-          selectedLanguage={selectedLanguage}
-          handleLanguageChange={handleLanguageChange}
-          languageOptions={languageOptions}
-        />
+        <select name="languges" id="languges">
+          <option value="eng">ENG</option>
+          <option value="vi">VN</option>
+          <option value="cn">CN</option>
+          <option value="fr">FRN</option>
+        </select>
 
         {/* Header Top bar Login */}
 
